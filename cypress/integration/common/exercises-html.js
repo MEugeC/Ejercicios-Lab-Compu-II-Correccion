@@ -21,6 +21,7 @@ Then('I should check if page contains the following html tags', (dataTable) => {
 Then('I should check if page contains the following attributes into {string} tag', (tag, dataTable) => {
     dataTable.hashes().forEach(row => {
         let property = row.parameter
-        cy.get(tag).contains(property)
+        // cy.get(tag).contains(property)
+        gh.getLineCode().contains(property).contains(tag);
     })
 })
